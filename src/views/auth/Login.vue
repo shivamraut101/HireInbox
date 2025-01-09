@@ -26,7 +26,7 @@ const handleLogin = async () => {
 <template>
   <div class="min-h-[80vh] flex items-center justify-center">
     <div class="card w-full max-w-md">
-      <h2 class="text-2xl font-bold mb-6 text-center">Sign In to Hiring Inbox</h2>
+      <h2 class="text-2xl font-bold mb-6 text-center">Sign In to HireInbox</h2>
       
       <div class="mb-6">
         <div class="flex rounded-md shadow-sm">
