@@ -16,12 +16,13 @@ onMounted(() => {
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Companies</h1>
       <RouterLink 
-        v-if="authStore.user?.type === 'company' && !authStore.user?.companyId"
-        to="/companies/new" 
-        class="btn-primary"
-      >
-        Add Company
-      </RouterLink>
+  v-if="authStore.user?.type === 'company' && !authStore.user?.companyId"
+  to="/companies/new" 
+  class="btn-primary"
+>
+  Add Company
+</RouterLink>
+
     </div>
     
     <div class="mb-6">

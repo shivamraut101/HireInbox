@@ -1,30 +1,43 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
 export const useAuthStore = defineStore('auth', () => {
-  const user = ref<null | {
-    id: string
-    name: string
-    email: string
-    type: 'company' | 'jobseeker'
-  }>(null)
+  const user = ref<{
+    id: string | null;
+    name: string | null;
+    email: string | null;
+    type: 'company' | 'jobseeker' | null;
+    companyId?: string | null;
+  }>({
+    id: null,
+    name: null,
+    email: null,
+    type: null,
+    companyId: null
+  });
 
-  const isAuthenticated = ref(false)
+  const isAuthenticated = ref(false);
 
+  // Update login to accept email, password, and type
   function login(credentials: { email: string; password: string; type: 'company' | 'jobseeker' }) {
-    // TODO: Implement actual authentication
+    // You can log the credentials here to see what they look like
+    console.log('Login credentials:', credentials);
+
+    // Simulate successful login based on credentials (use password if necessary)
     user.value = {
       id: '1',
       name: credentials.type === 'company' ? 'Tech Corp' : 'John Doe',
       email: credentials.email,
-      type: credentials.type
-    }
-    isAuthenticated.value = true
+      type: credentials.type,
+      companyId: credentials.type === 'company' ? 'company-id-123' : null,
+    };
+
+    isAuthenticated.value = true;
   }
 
   function logout() {
-    user.value = null
-    isAuthenticated.value = false
+    user.value = { id: null, name: null, email: null, type: null, companyId: null };
+    isAuthenticated.value = false;
   }
 
   return {
@@ -32,5 +45,5 @@ export const useAuthStore = defineStore('auth', () => {
     isAuthenticated,
     login,
     logout
-  }
-})
+  };
+});
