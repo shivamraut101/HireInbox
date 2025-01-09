@@ -45,7 +45,7 @@ const stats = [
           Your Dream Career Starts Here
         </h1>
         <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-          Connect with top companies, find your perfect role, and take the next step in your career journey with Hiring Inbox.
+          Connect with top companies, find your perfect role, and take the next step in your career journey with HireInbox.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <RouterLink 
@@ -84,7 +84,7 @@ const stats = [
 
     <!-- Features Section -->
     <section class="py-16">
-      <h2 class="text-3xl font-bold text-center mb-12">Why Choose Hiring Inbox?</h2>
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose HireInbox?</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div 
           v-for="feature in features" 
@@ -108,7 +108,7 @@ const stats = [
           Ready to Transform Your Hiring Process?
         </h2>
         <p class="text-xl text-primary-100 mb-8">
-          Join thousands of companies who trust Hiring Inbox for their recruitment needs.
+          Join thousands of companies who trust HireInbox for their recruitment needs.
         </p>
         <RouterLink 
           to="/register" 
